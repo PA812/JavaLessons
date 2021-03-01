@@ -5,7 +5,6 @@ public interface Human {
 
     void learning();
 
-
     default void show() {
         System.out.println("show Human");
     }

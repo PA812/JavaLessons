@@ -44,7 +44,7 @@ public class Student implements Human{
 
     @Override
     public void show() {
-
+        System.out.println("Show Student");
     }
 
 }
