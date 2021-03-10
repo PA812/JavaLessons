@@ -1,12 +1,27 @@
 package com.company.Lesson3.exaptions;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Application2 {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException{
+
+        String str = "";
+
+
+            Thread.sleep(1000);
+
+
+        try (TestCloseApp app = new TestCloseApp()) {
+            app.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         //try с ресурсами - не нужно закрывать потоки
-        try (Scanner scanner = new Scanner(System.in)){
+        try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Введите первое число");
             int first = scanner.nextInt();
             System.out.println("Введите второе число");
@@ -20,7 +35,8 @@ public class Application2 {
             e.printStackTrace();
         }
 
-        Thread.sleep(100);
+            Thread.sleep(100);
+
         System.out.println("Ok");
     }
 }
