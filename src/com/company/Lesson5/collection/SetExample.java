@@ -45,13 +45,15 @@ public class SetExample {
         System.out.println();
 
         //Comparator<Student> studentPhone = new StudentPhone();
-        Set<Developer>developerTreeSet = new TreeSet<>(Comparator.comparing(o -> o.getEmail()));
+        //                                                                  o -> o.getEmail
+        Set<Developer>developerTreeSet = new TreeSet<>(Comparator.comparing(Developer::getName));
         developerTreeSet.add(new Developer(1L, "JavaDev", "java@com"));
         developerTreeSet.add(new Developer(2L, "CPPDev", "cpp@com"));
         developerTreeSet.add(new Developer(3L, "C#Dev", "c#@com"));
         developerTreeSet.add(new Developer(4L, "JSDev", "js@com"));
         developerTreeSet.add(new Developer(5L, "PHPDev", "php@com"));
         developerTreeSet.add(new Developer(6L, "PythonDev", "python@com"));
+
 
         for (Developer developer : developerTreeSet) {
             System.out.println(developer);

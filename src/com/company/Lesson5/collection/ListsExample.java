@@ -26,14 +26,6 @@ public class ListsExample {
         //============== Практика ===============
         ArrayList<String> strings = new ArrayList<>(List.of("A","B", "C"));
         strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
-        strings.add("D");
         strings.add("E");
         strings.add("F");
         //...
