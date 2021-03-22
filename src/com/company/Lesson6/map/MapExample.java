@@ -44,11 +44,6 @@ public class MapExample {
 
         Human human = new Human();
 
-        human.funcMethod(new MyFuncInter<String>() {
-            @Override
-            public String myMethod(String s) {
-                return "Hello from my method";
-            }
-        });
+        human.funcMethod((MyFuncInter<String>) s -> "Hello from my method");
     }
 }

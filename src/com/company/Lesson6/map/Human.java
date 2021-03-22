@@ -22,7 +22,7 @@ public class Human {
         return INN;
     }
 
-    void funcMethod(MyFuncInter<?>inter){
+    void funcMethod(MyFuncInter<? extends String>inter){
 
     }
 
