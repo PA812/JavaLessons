@@ -25,15 +25,15 @@ public class ThreadRunnableExample {
     public static void main(String[] args) {
         for (int i = 0; i <10; i++) {
             HelloTread helloTread = new HelloTread();
-            helloTread.start();//запуск процессов
+            helloTread.start();//запуск потока
 
             HelloRunnable helloRunnable = new HelloRunnable();
             Thread thread = new Thread(helloRunnable);
-            thread.start();
+            thread.start();//запуск потока
 
 
             new Thread(() -> System.out.println("Runnable lambda " + Thread.currentThread().getName() + " " +
-                    Thread.currentThread().getId())).start();
+                    Thread.currentThread().getId())).start();//запуск потока
 
 
         }
