@@ -15,12 +15,12 @@ public class EchoServer {
              BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
              PrintWriter writer = new PrintWriter(clientSocket.getOutputStream(), true)//flush - немедленная отправка данных
              ) {
-            System.out.println("Connection at " + clientSocket.getRemoteSocketAddress());
-            writer.println("This is echo server. Type Bye to exit");
+            System.out.println("Connection at " + clientSocket.getRemoteSocketAddress());//<<<<
+            writer.println("This is echo server. Type Bye to exit");//>>>>
             String inputLine;
-            while ((inputLine = reader.readLine())!=null){
-                System.out.println(LocalTime.now() +" "+ inputLine);
-                writer.println(inputLine);
+            while ((inputLine = reader.readLine())!=null){//<<<<<<< постоянно считываем данные клиента
+                System.out.println(LocalTime.now() +" "+ inputLine);//<<<<
+                writer.println(inputLine);//<<<<
                 if(inputLine.toLowerCase().equals("bye")){
                     break;
                 }
