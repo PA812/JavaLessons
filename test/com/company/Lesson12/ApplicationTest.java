@@ -30,11 +30,21 @@ public class ApplicationTest {
         expect.add(new Human(1, "Alex"));
         expect.add(new Human(3, "Andrey"));
 
-        if(actual.size()!=expect.size()){
-            Assert.fail();
-        }else {
 
+
+        if (actual.size() == expect.size()){
+            for (int i = 0; i < actual.size(); i++) {
+                if (!actual.get(i).equals(expect.get(i))) {
+                    Assert.fail();
+                    break;
+                } else {
+                    Assert.assertTrue(true);
+                }
+            }
+        }else {
+            Assert.fail();
         }
+
     }
 
 
